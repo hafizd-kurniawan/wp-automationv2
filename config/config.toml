@@ -1,0 +1,34 @@
+[wordpress]
+username = ""
+password = ""
+templateUrl = ""
+baseUrl = ""
+
+[database]
+name = "articles.db"
+
+[kompasArticles]
+otomotif = "https://otomotif.kompas.com/?source=navbar"
+teknologi = "https://tekno.kompas.com/?source=navbar"
+gayaHidup = "https://lifestyle.kompas.com/?source=navbar"
+keuangan = "https://money.kompas.com/?source=navbar"
+masakan = "https://www.kompas.com/food?source=navbar"
+traveling = "https://travel.kompas.com/?source=navbar"
+kesehatan = "https://health.kompas.com/?source=navbar"
+
+[kompasScraping]
+xpArticlesV1 = "//div[@class='row article__wrap__grid--flex col-offset-fluid']//div[@class='article__grid']"
+xpArticleLink = ".//h3/a/@href"
+xpArticleTag = ".//h2/text()"
+xpArticleTitle = ".//h3/a/text()"
+xpArticleFeaturedImage = ".//div[@class='article__asset']/a/img/@data-src"
+xpArticleExcerpt = ".//div[@class='article__lead']/text()"
+
+xpDetailArticles = "//div[@class='read__content']"
+xpDetailArticleTitle = "//h1/text()"
+xpDetailArticleImage = "//div[@class='photo__wrap']//img"
+xpIgnoreAttrib = ["kompasidRec"]
+xpDetailArticle = ".//*[@class='article__link']"
+xpImageDescription = "//div[contains(text(),'Lihat Foto')]/parent::div/img"
+xpPhotoWrap = "./*[@class='photo__wrap']"
+targetTag = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "img", "div", "li"]
